@@ -1,0 +1,224 @@
+﻿
+@{
+    ViewData["Title"] = "Plans";
+}
+@section CssFile{
+    <link rel="stylesheet" href="~/css/Packages.css" asp-append-version=true type="text/css"/>
+    
+}
+<div style="margin-top:60px;"></div>
+
+
+
+<nav id="navbar-example2" class="navbar navbar-light px-3">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#Foundation">Foundation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Intermediate">Intermediate</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Finals">Final</a>
+    </li>
+  </ul>
+</nav>
+
+<br />
+<div style="background-color:lightgray;width:100%;">
+    <div class=container >
+        <div class=row>
+            <h1 class=col-md-4>For Cpt</h1>
+            <div class=col-md-6></div>
+            <a  class="btn btn-outline-dark col-md-2 mb-2" style="width:auto; height:40px; margin-top:10px;">View All Plans</a>
+        </div>
+        <div class=row>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+              @for (var i = 0; i < 2; i++)
+              {
+                  <div class="mySlides1">
+                        <div class=row>
+                            <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                <div class="header">Name of the Plan @i</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Whole Body Goes Here
+                                    </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+                                </div>
+                                </div>
+                             </div>
+                             <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                        <div class="header">Name of the Plan</div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Whole Body Goes Here
+                                            </p>
+                                            <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+                                        </div>
+                                </div>
+                             </div>
+                             <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                        <div class="header">Name of the Plan</div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Whole Body Goes Here
+                                            </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+                                            
+                                        </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+              }
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+            </div>
+        </div>
+        <br />
+
+    </div>
+</div>
+
+<div class=container id="Intermediate">
+        <div class=row>
+            <h1 class=col-md-4>For IPCC</h1>
+            <div class=col-md-6></div>
+            <a class="btn btn-outline-dark col-md-2 mb-2" style="width:auto; height:40px; margin-top:10px;">View All Plans</a>
+    
+        </div>
+        <div class=row>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+               @for (var i = 0; i < 2; i++)
+               {
+                    <div class="mySlides2">
+                        <div class=row>
+                            <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                <div class="header">Name of the Plan @i</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Whole Body Goes Here
+                                    </p>
+                                                                        <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+
+                                </div>
+                                </div>
+                             </div>
+                             <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                        <div class="header">Name of the Plan</div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Whole Body Goes Here
+                                            </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+                                           
+                                        </div>
+                                </div>
+                             </div>
+                             <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                        <div class="header">Name of the Plan</div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Whole Body Goes Here
+                                            </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               }
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1,2)">&#10095;</a>
+            </div>
+        </div>
+        
+</div>
+
+<div style="background-color:lightgray;width:100%;">
+    <div class=container id="Finals">
+        <div class=row>
+            <h1 class=col-md-4>For Final</h1>
+            <div class=col-md-6></div>
+            <a class="btn btn-outline-dark col-md-2 mb-2" style="width:auto; height:40px; margin-top:10px;">View All Plans</a>
+    
+        </div>
+        <div class=row>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+              @for (var i = 0; i < 2; i++)
+              {
+                  <div class="mySlides3">
+                        <div class=row>
+                            <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                <div class="header">Name of the Plan @i</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Whole Body Goes Here
+                                    </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+                                </div>
+                                </div>
+                             </div>
+                             <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                        <div class="header">Name of the Plan</div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Whole Body Goes Here
+                                            </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+
+                                        </div>
+                                </div>
+                             </div>
+                             <div class="col-md-4 mb-4">
+                                <div class="card" style="width: 100%; grid-column:1/2;">
+                                        <div class="header">Name of the Plan</div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Whole Body Goes Here
+                                            </p>
+                                    <a asp-controller="Home" asp-action="AllPackages" asp-route-name="PlanName" class="btn btn-outline-info">Details</a>
+
+                                        </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+              }
+
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1,3)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1,3)">&#10095;</a>
+            </div>
+        </div>
+        <br />
+
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+<script src="~/js/Plans.js" asp-append-version=true></script>
+}

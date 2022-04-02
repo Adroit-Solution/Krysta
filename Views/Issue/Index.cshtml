@@ -1,0 +1,116 @@
+﻿@model Test_Series.Models.IssueModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+    
+
+<h6 class="title" style=""></h6>
+
+<div class=container>
+    <div class=row>   
+        <div class="col-md-3 mb-4 " >
+            <h3 mb-0>Call us</h3><br />
+            <hr class="mb-5 mt-0" style="height:2px;"/>
+
+            <div class=grid>
+                <a href="tel:+919054561234" class="h5 call number1 order-last " target="_blank" >9054561234</a><br />
+                <a href="tel:+919054561234" class="h5 call number2 order-last" target="_blank" >9054561234</a><br />
+                <span class="iconify phone order-first" data-icon="bxs:phone"  style="font-size: 50px; order:0; display:block;"></span>
+            </div>
+        </div>  
+        <div class=col-md-1></div>
+        <div class="col-md-3 mb-4">
+            <h3 class="mb-0">Whatsapp your Queries</h3><br />
+            <hr class="mb-5 mt-0" style="height:2px;"/>
+
+            <div class=grid>
+                 <a href=" https://web.whatsapp.com/send?phone=919054561234&text=Hello" target="_blank" class="h5 call text-decoration-none number1" style=" order:1;">9054561234</a><br />
+                <a href=" https://web.whatsapp.com/send?phone=919054561234&text=Hello" target="_blank" class="h5 call text-decoration-none number2" style="order:2;">9054561234</a><br />
+                <span class="iconify phone" data-icon="akar-icons:whatsapp-fill" style=" order:0; font-size: 50px;"></span>                
+            </div>
+        </div>
+        <div class="col-md-1 empty"></div>
+        
+        <div class=col-md-3>
+            <h3 mb-0>Email Us</h3><br />
+            <hr class="mb-5 mt-0" style="height:2px;"/>
+
+            <div class=grid>
+                <a href="mailto:agrawalvishesh9271@gmail.com" target="_blank" class="h5 call text-decoration-none number1" style="order:1;">agrawalvishesh9271@gmail.com</a><br />
+                <a href="mailto:agrawalvishesh9271@gmail.com" target="_blank" class="h5 call text-decoration-none number2" style="order:2;">agrawalvishesh9271@gmail.com</a><br />
+                <span class="iconify phone" data-icon="ci:mail" style="order:0; font-size: 50px;"></span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-3 mb-3">
+        <span class=h3>Also Connect Us on </span>
+        </div>
+        <div class=col-md-8>
+        <span class="iconify hoverr" data-icon="brandico:facebook" style=" font-size: 30px;"></span>
+        <span class="iconify hoverr" data-icon="akar-icons:twitter-fill" style=" font-size: 30px;"></span>
+        <span class="iconify hoverr" data-icon="akar-icons:instagram-fill" style=" font-size: 30px;"></span>
+        <span class="iconify hoverr" data-icon="akar-icons:linkedin-box-fill" style=" font-size: 30px;"></span>
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-top:50px;">
+    
+    <h2 class="title" style="margin-top:0px">Fill the form for any Complaint or Issue</h2>
+    <hr style="height:2px;"/>
+    <br />
+    <form asp-action="View" method="post" style="margin-left:50px;">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class=row>
+                <div class=col-md-1>
+                <label asp-for="Name" class="control-label fw-bold"></label>
+
+                </div>
+                <div class="col-md-3 mb-4" >
+                    <input asp-for="Name" class="form-control" placeholder="Name"/>
+                <span asp-validation-for="Issue" class="text-danger"></span>
+                </div>
+                <div class=col-md-1>
+                <label asp-for="Email" class="control-label fw-bold"></label>
+
+                </div>
+                <div class=col-md-3>
+                    <input asp-for="Email" class="form-control " placeholder="Email" />
+                <span asp-validation-for="Issue" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+            <div class=row>
+                <div class=col-md-1>
+                <label asp-for="Issue" class="control-label fw-bold"></label>
+
+                </div>
+                <div class=col-md-6>
+                    <textarea asp-for="Issue" class="form-control" placeholder="Please write your Issues" rows=3></textarea>
+                <span asp-validation-for="Issue" class="text-danger"></span>
+                </div>
+            </div>
+            
+        </div>
+        <br /><br />
+        <div class=row>
+            <div class=col-6>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary me-4">
+                    <input type="Reset" value="Reset" class="btn btn-danger" />
+                </div>
+            </div>
+            
+        </div>
+    </form>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

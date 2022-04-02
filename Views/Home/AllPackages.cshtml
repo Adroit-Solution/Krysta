@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "AllPlans";
+}
+@section CssFile{
+    <link rel="stylesheet" href="~/css/Packages.css" asp-append-version=true type="text/css"/>
+    
+}
+<div style="margin-top:80px;"></div>
+
+<div class=container>
+    <h1>AllPlans</h1>
+    <div class=row>
+        @for (var i = 0; i < 5; i++)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 100%; grid-column:1/2;">
+                        <div class="header">Name of the Plan</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Whole Body Goes Here
+                            </p>
+                            <a href="#" class="btn btn-outline-info">Details</a>
+                            <a href="#" class="btn btn-outline-success">Add to Cart</a>
+                        </div>
+                </div>
+             </div>
+        }
+    </div>
+</div>

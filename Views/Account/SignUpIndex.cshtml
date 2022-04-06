@@ -1,0 +1,89 @@
+﻿@model Test_Series.Models.SignUpViewModel
+
+@{
+    ViewData["Title"] = "SignUpView";
+}
+<div class=container> 
+    <div class=row>
+         <div class=col-md-6>
+            <div class=container>
+            <h1>Sign Up</h1>
+            <hr style="height: 2px;"/>
+            <div class="row">
+                <div class="col-md-8">
+                    <form asp-action="SignUpIndex" method="post" >
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="FirstName" class="control-label"></label>
+                            <input asp-for="FirstName" class="form-control" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Lastname" class="control-label "></label>
+                            <input asp-for="Lastname" class="form-control" />
+                            <span asp-validation-for="Lastname" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Phone" class="control-label"></label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Level" class="control-label"></label>
+                            <select asp-for="Level" class="form-control" />
+                                <option value="">Please Select Your Level</option>
+                                <option value="1">Foundation</option>
+                                <option value="2">Intermediate</option>
+                                <option value="3">Final</option>
+                            </select>
+                            <span asp-validation-for="Level" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Edition" class="control-label"></label>
+                            <select asp-for="Edition" class="form-control" />
+                                <option value="1">New</option>
+                            </select>
+                            <span asp-validation-for="Edition" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input type="password" asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <label asp-for="Confirm" class="control-label"></label>
+                            <input type="password"  asp-for="Confirm" class="form-control" />
+                            <span asp-validation-for="Confirm" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-outline-success" />
+                            <input type="reset" value="Reset" class="btn btn-outline-danger" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=col-md-6 style="border-left:3px solid #dba0cc;">
+        <ul>
+            Things to give here in options 
+            <li>FAQS</li>
+            <li>THings we are Providing</li>
+        </ul>
+    </div>
+</div>
+
+</div>

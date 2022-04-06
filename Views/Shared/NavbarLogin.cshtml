@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Test_Series.Repository
+@model string
+@inject SignInManager<AccountRepo> signInManger;
+
+@if (!signInManger.IsSignedIn(User))
+{
+    if (Model == "dark")
+    {
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="SignUpIndex">SignUp</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="SignUpIndex">SignUp</a>
+        </li>
+    }
+}
+else
+{
+    <div class="btn-group m-lg-auto">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            @signInManger.UserManager.FindByEmailAsync(User.Identity.Name).Result.Name
+        </button>
+        <ul class="dropdown-menu">
+
+            <li><a class="dropdown-item nav-link" asp-controller="Account" asp-action="Logout">Logout</a></li>
+            <li><a class="dropdown-item nav-link" asp-controller="Authentication" asp-action="ResetPassword">Change Password</a></li>
+
+        </ul>
+    </div>
+}

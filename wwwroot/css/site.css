@@ -103,6 +103,7 @@ a{
 
 .hoverr:hover {
     color: rgb(1, 134, 251);
+    
 }
 
 .social{
@@ -142,3 +143,4 @@ label[for]:not([for='Lastname'])::after{
     opacity:0.4;
     cursor:pointer;
 }
+

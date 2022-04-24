@@ -15,6 +15,7 @@ builder.Services.AddDbContextPool<AppDbContext>(options =>
 builder.Services.AddIdentity<AccountRepo, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
+builder.Services.AddScoped<IIssueRepository, IssueRepository>();
 
 var app = builder.Build();
 

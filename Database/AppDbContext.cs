@@ -21,6 +21,7 @@ namespace Test_Series.Database
         public DbSet<SubjectViewModel> Subjects { get; set; }
         public DbSet<ParentViewModel> Schemes{ get; set; }
         public DbSet<ChildViewModel> Plans { get; set; }
+        public DbSet<IssueModel> Queries { get; set; }
     }
     
     
